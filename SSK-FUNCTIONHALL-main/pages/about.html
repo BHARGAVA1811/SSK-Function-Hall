@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us - SSK Function Hall</title>
+  <style>
+    /* Global Styles */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header, footer {
+      background: linear-gradient(to right, #ff6a00, #ee0979);
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    /* Navigation Bar */
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* Container for Content */
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 30px;
+      background: #ffffff;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+
+    h2 {
+      color: #ff6a00;
+      margin-bottom: 15px;
+      margin-top: 40px;
+      font-size: 28px;
+      border-bottom: 2px solid #ff6a00;
+      padding-bottom: 5px;
+    }
+
+    p {
+      line-height: 1.6;
+      font-size: 17px;
+      margin: 15px 0;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin: 10px 0;
+      font-size: 16px;
+    }
+
+    .testimonials {
+      background-color: #f0f4f8;
+      padding: 20px;
+      margin-top: 20px;
+      border-left: 5px solid #ff6a00;
+      border-radius: 5px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      background-color: #ee0979;
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #d1066a;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    /* Owner Section Styles */
+    .owner-details {
+      background-color: #ffdd57;
+      padding: 30px 20px;
+      color: #333;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .owner-details h3 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .owner-details p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+
+    .owner-info {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .owner-photo {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .details {
+      max-width: 600px;
+      text-align: left;
+    }
+
+    .details h4 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+
+    .details p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #666;
+    }
+
+    /* Footer Styles */
+    footer {
+      background-color: #2c2c2c;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <h1>SSK FUNCTION HALL</h1>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="cctv.html">CCTV Surveillance</a></li>
+      <li><a href="bookings.html">Booking</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="container">
+  <div class="section">
+    <h2>Our Story</h2>
+    <p>Founded in the heart of Yadagirigutta, SSK Function Hall was created with the vision of providing a high-quality venue for weddings, events, and social gatherings. Over the years, we’ve grown to become one of the most trusted names for memorable celebrations.</p>
+  </div>
+
+  <div class="section">
+    <h2>Our Mission</h2>
+    <p>We aim to deliver exceptional event experiences by offering modern facilities, professional management, and a welcoming atmosphere — all at affordable rates.</p>
+  </div>
+
+  <div class="section">
+    <h2>Facilities</h2>
+    <ul>
+      <li>Spacious Hall (AC & Non-AC)</li>
+      <li>Large Parking Area</li>
+      <li>Stage & Decoration Services</li>
+      <li>Catering Support</li>
+      <li>Power Backup</li>
+    </ul>
+  </div>
+
+  <!-- <div class="section">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonials">
+      <p>“SSK Function Hall made my wedding day truly unforgettable. Everything was well organized and the staff was very helpful!”</p>
+      <p><strong>— Ramesh K.</strong></p>
+    </div>
+    <div class="testimonials">
+      <p>“Spacious, clean, and beautiful. The best part is how affordable it is without compromising quality.”</p>
+      <p><strong>— Sneha D.</strong></p>
+    </div>
+  </div> -->
+
+  <div class="owner-details" id="owner">
+    <h3>Meet the Owner</h3>
+    <div class="owner-info">
+      <img src="images/DSC074611.JPG" alt="Owner Photo" class="owner-photo">
+      <div class="details">
+        <h4>VISHNUMURTHY KURAPATI</h4>
+        <p>Vishnumurthy Kurapati is the proud owner of SSK Function Hall. With over 10 years of experience in event planning and management, Vishnu ensures that every event hosted at SSK Function Hall is a memorable one. His passion for hospitality and attention to detail is evident in every event held at the hall. His vision is to create an event space that combines elegance and warmth, making each celebration a unique and cherished experience.</p>
+        <div class="contact-info">
+          <p><strong>Phone:</strong> +91 9948938404</p>
+          <p><strong>Email:</strong> sskfuntionhall@gmail.com</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" style="text-align: center;">
+    <a href="booking.html" class="btn">Book Your Event Now</a>
+  </div>
+</div>
+
+<footer>
+  <p>© 2025 SSK Function Hall. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

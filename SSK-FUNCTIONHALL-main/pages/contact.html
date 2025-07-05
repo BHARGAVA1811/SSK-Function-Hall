@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - SSK Function Hall</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Header styling to match main page */
+    header {
+      background: linear-gradient(to right, #ff6a00, #ee0979);
+      color: white;
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    nav h1 {
+      font-size: 28px;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #ffdd57;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #222;
+      color: white;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+      background: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .owner-photo {
+      flex: 1;
+      max-width: 200px;
+    }
+
+    .owner-photo img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .info-text {
+      flex: 2;
+    }
+
+    .info-text p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #444;
+      margin: 8px 0;
+    }
+
+    .info-text strong {
+      color: #222;
+    }
+
+    iframe {
+      width: 100%;
+      height: 350px;
+      margin-top: 30px;
+      border: 0;
+      border-radius: 10px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .contact-info {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .info-text {
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>SSK FUNCTION HALL</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="cctv.html">CCTV Surveillance</a></li>
+        <li><a href="bookings.html">Booking</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>Get in Touch</h2>
+    <div class="contact-info">
+      <div class="owner-photo">
+        <img src="images/DSC074611.JPG" alt="Owner Photo">
+      </div>
+      <div class="info-text">
+        <p><strong>Owner:</strong> K. Vishnumurthy</p>
+        <p><strong>Address:</strong> Gangasanipally Road, Yadagirigutta, Yadadri, 508115</p>
+        <p><strong>Contact:</strong> +91 9948938404, +91 8328018480</p>
+        <p><strong>Email:</strong> sskfunctionalhall@gmail.com</p>
+      </div>
+    </div>
+
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15291.67979066333!2d78.9358043!3d17.5612815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb03a3578c13e7%3A0xd2d6c6d9b457e59c!2sYadagirigutta%2C%20Telangana%20508115!5e0!3m2!1sen!2sin!4v1715682800000"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+
+  <footer>
+    <p>© 2025 SSK Function Hall. All rights reserved.</p>
+  </footer>
+</body>
+</html>

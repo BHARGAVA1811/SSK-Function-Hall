@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book Your Event - SSK Function Hall</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f4f8;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #ff6a00, #ee0979);
+      color: white;
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    nav h1 {
+      font-size: 28px;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #ffdd57;
+    }
+
+    .booking-section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #ffffff;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+
+    .booking-section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #ff6a00;
+    }
+
+    .intro, .facilities {
+      margin-bottom: 25px;
+    }
+
+    .intro p, .facilities ul {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #333;
+      margin-top: 10px;
+    }
+
+    .facilities ul {
+      padding-left: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      padding: 10px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      background: #ff6a00;
+      color: white;
+      padding: 12px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #e65a00;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #222;
+      color: white;
+      margin-top: 40px;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>SSK FUNCTION HALL</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="cctv.html">CCTV Surveillance</a></li>
+        <li><a href="bookings.html">Booking</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="booking-section">
+    <h2>Book Your Event at SSK Function Hall</h2>
+
+    <div class="intro">
+      <p>At SSK Function Hall, we provide a versatile space for all kinds of events, including weddings, birthdays, corporate events, and other celebrations. Our hall is equipped with modern amenities and is available for both AC and Non-AC bookings, depending on your needs. We also provide excellent parking space and customization options to ensure your event is special and stress-free.</p>
+    </div>
+
+    <div class="facilities">
+      <h3>Our Facilities Include:</h3>
+      <ul>
+        <li>Large, spacious hall with customizable seating arrangements</li>
+        <li>AC and Non-AC options available</li>
+        <li>State-of-the-art sound and lighting system</li>
+        <li>Parking space for all guests</li>
+        <li>24/7 customer support</li>
+        <li>Decor services available upon request</li>
+        <li>Catering services for a variety of cuisines</li>
+      </ul>
+    </div>
+
+    <form action="#" method="POST">
+      <label for="eventType">Event Type</label>
+      <select id="eventType" name="eventType">
+        <option value="wedding">Wedding</option>
+        <option value="birthday">Birthday Party</option>
+        <option value="corporate">Corporate Event</option>
+        <option value="other">Other</option>
+      </select>
+
+      <label for="date">Event Date</label>
+      <input type="date" id="date" name="eventDate" required />
+
+      <label for="guests">Number of Guests</label>
+      <input type="number" id="guests" name="guests" placeholder="Enter number of guests" required />
+
+      <label for="acOption">AC or Non-AC?</label>
+      <select id="acOption" name="acOption">
+        <option value="ac">AC</option>
+        <option value="non-ac">Non-AC</option>
+      </select>
+
+      <label for="specialRequests">Special Requests or Requirements</label>
+      <textarea id="specialRequests" name="specialRequests" rows="4" placeholder="Enter any special requests..."></textarea>
+
+      <button type="submit">Book Now</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 SSK Function Hall. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome to SSK Function Hall</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f4f8;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #ff6a00, #ee0979);
+      color: white;
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    nav h1 {
+      font-size: 28px;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #ffdd57;
+    }
+
+    .hero {
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+      background-image: url('images/WhatsApp Image 2025-04-22 at 08.29.04_82a30bc1.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.5);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      padding: 20px;
+    }
+
+    .hero-content h2 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      animation: fadeInUp 1.5s ease-out;
+    }
+
+    .hero-content p {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+
+    .quote {
+      font-style: italic;
+      font-size: 1.2rem;
+      color: #f0eaea;
+      margin-top: 15px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      background: #ff0077;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #e60066;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #222;
+      color: white;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .function-hall-description {
+      background-color: #fff;
+      padding: 50px 20px;
+      text-align: center;
+      margin-top: 30px;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    .function-hall-description h4 {
+      font-size: 1.8rem;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .function-hall-description p {
+      font-size: 1.1rem;
+      color: #666;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .owner-details {
+      background-color: #ffdd57;
+      padding: 30px 20px;
+      color: #333;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .owner-details h3 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .owner-details p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+
+    .owner-info {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .owner-photo {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .details {
+      max-width: 600px;
+      text-align: left;
+    }
+
+    .details h4 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+
+    .details p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #666;
+    }
+
+    .contact-info p {
+      font-size: 1rem;
+      color: #444;
+    }
+
+    .contact-info p strong {
+      font-weight: bold;
+    }
+
+    /* === Instagram Popup === */
+    .popup-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    .popup-content {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+      max-width: 90%;
+      width: 400px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      animation: fadeIn 0.4s ease-in-out;
+      position: relative;
+    }
+
+    .popup-content h2 {
+      margin-bottom: 10px;
+      color: #e1306c;
+    }
+
+    .popup-content p {
+      margin-bottom: 20px;
+      color: #444;
+    }
+
+    .follow-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #e1306c;
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .follow-btn:hover {
+      background: #c82361;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 24px;
+      cursor: pointer;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>SSK FUNCTION HALL</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="cctv.html">CCTV Surveillance</a></li>
+        <li><a href="bookings.html">Booking</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Welcome to SSK FUNCTION HALL</h2>
+      <p>Yadagirigutta</p>
+      <a href="#booking" class="btn">Book Now</a>
+      <div class="quote">
+        “Where moments become memories, and celebrations are made unforgettable.” 
+      </div>
+    </div>
+  </section>
+
+  <section class="function-hall-description">
+    <h4>Why Choose SSK Function Hall?</h4>
+    <p>SSK Function Hall is the perfect venue for all types of functions, from weddings and birthdays to corporate events and social gatherings. Our spacious hall is equipped with modern facilities and offers both AC and Non-AC options to suit your needs. We also offer a large parking area to accommodate all your guests comfortably. With reasonable prices and customizable packages, we ensure that every event is tailored to your requirements, making your celebration memorable and hassle-free.</p>
+  </section>
+
+  <section class="owner-details" id="owner">
+    <h3>Meet the Owner</h3>
+    <div class="owner-info">
+      <img src="images/DSC074611.JPG" alt="Owner Photo" class="owner-photo">
+      <div class="details">
+        <h4>VISHNUMURTHY KURAPATI</h4>
+        <p>Vishnumurthy Kurapati is the proud owner of SSK Function Hall. With over 10 years of experience in event planning and management, Vishnu ensures that every event hosted at SSK Function Hall is a memorable one. His passion for hospitality and attention to detail is evident in every event held at the hall. His vision is to create an event space that combines elegance and warmth, making each celebration a unique and cherished experience.</p>
+        <div class="contact-info">
+          <p><strong>Phone:</strong> +91 9948938404</p>
+          <p><strong>Email:</strong> sskfuntionhall@gmail.com</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 SSK Function Hall. All rights reserved.</p>
+  </footer>
+
+  <!-- Instagram Follow Popup -->
+  <div id="insta-popup" class="popup-overlay">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup()">&times;</span>
+      <h2>Follow Us on Instagram!</h2>
+      <p>Stay updated with our latest events and celebrations.</p>
+      <a href="https://www.instagram.com/sskfunctionhall" target="_blank" class="follow-btn">Follow @sskfunctionhall</a>
+    </div>
+  </div>
+
+  <script>
+    window.onload = function() {
+      document.getElementById('insta-popup').style.display = 'flex';
+    };
+
+    function closePopup() {
+      document.getElementById('insta-popup').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
